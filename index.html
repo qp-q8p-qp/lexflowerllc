@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LEX FLOWER LLC — metals, fasteners, logistics and green services in Lviv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FBF8F3;--green:#16302B;--green-2:#1f3f38;--pink:#F28FB0;--pink-d:#e0739a;--pink-l:#fde6ee;--steel:#7A8A8F;--white:#fff;--mute:#56625f;--line:#e8e1d6;
+--disp:"Syne",system-ui,sans-serif;--body:"Lexend",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--cream);color:var(--green);font-size:17px;line-height:1.65;font-weight:300}
+b,strong{font-weight:500}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:78px}
+.logo{font-family:var(--disp);font-weight:800;font-size:22px;text-decoration:none;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.logo svg{width:30px;height:30px}
+.logo small{font-family:var(--body);font-weight:400;font-size:13px;color:var(--steel)}
+nav a{margin-left:26px;text-decoration:none;font-weight:400;font-size:15px;color:var(--mute)}
+nav a:hover{color:var(--green)}
+.hero{padding:40px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.hero h1{font-family:var(--disp);font-weight:800;font-size:clamp(42px,6vw,84px);line-height:.98;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--pink-d)}
+.hero p{margin-top:24px;font-size:19px;color:var(--mute);max-width:46ch}
+.btns{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;text-decoration:none;font-weight:500;background:var(--green);color:var(--cream)}
+.btn:hover{background:var(--green-2)}
+.btn.o{background:transparent;border:1.5px solid var(--green);color:var(--green)}
+.bloom{max-width:420px;margin:auto}
+.bloom svg{width:100%;height:auto;display:block}
+@media (prefers-reduced-motion:no-preference){
+  .pt{transform-origin:200px 170px;animation:open 1.2s cubic-bezier(.2,.8,.3,1.2) both}
+  .pt:nth-child(2){animation-delay:.08s}.pt:nth-child(3){animation-delay:.16s}.pt:nth-child(4){animation-delay:.24s}.pt:nth-child(5){animation-delay:.32s}.pt:nth-child(6){animation-delay:.4s}
+  @keyframes open{from{transform:scale(0) rotate(-40deg);opacity:0}}
+  .nut{transform-origin:200px 170px;animation:turn 14s linear infinite}
+  @keyframes turn{to{transform:rotate(360deg)}}
+}
+section{padding:88px 0}
+h2{font-family:var(--disp);font-weight:800;font-size:clamp(32px,4.2vw,54px);line-height:1.02;letter-spacing:-.03em;margin-bottom:14px}
+.sub{font-size:18px;color:var(--mute);max-width:58ch;margin-bottom:44px}
+.cycle{background:var(--green);color:var(--cream);border-radius:44px;margin:0 16px}
+.cycle .sub{color:#b9cbc5}
+.ring{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.ring::before{content:"";position:absolute;left:12%;right:12%;top:34px;height:2px;background:repeating-linear-gradient(90deg,var(--pink) 0 10px,transparent 10px 18px)}
+.stage{text-align:center;padding:0 14px;position:relative}
+.stage .dot{width:68px;height:68px;border-radius:50%;background:var(--green-2);border:2px solid var(--pink);display:grid;place-items:center;margin:0 auto 18px;font-family:var(--disp);font-weight:800;font-size:22px;color:var(--pink)}
+.stage h3{font-family:var(--disp);font-size:21px;margin-bottom:6px}
+.stage p{font-size:15px;color:#b9cbc5}
+.div{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dv{background:var(--white);border:1px solid var(--line);border-radius:26px;padding:30px;display:flex;flex-direction:column}
+.dv .ic{width:48px;height:48px;border-radius:14px;background:var(--pink-l);display:grid;place-items:center;margin-bottom:18px}
+.dv .ic svg{width:26px;height:26px}
+.dv h3{font-family:var(--disp);font-weight:700;font-size:23px;line-height:1.15;margin-bottom:8px}
+.dv p{color:var(--mute);font-size:16px}
+.dv ul{list-style:none;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.dv li{font-size:14px;padding:4px 0;display:flex;justify-content:space-between;gap:12px}
+.dv li span:last-child{color:var(--steel);font-size:13px}
+.dv.feat{background:var(--pink-l);border-color:#f7cfdc}
+.dv.feat .ic{background:var(--white)}
+.green .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.green p{font-size:18px;max-width:50ch}
+.green p+p{margin-top:14px}
+.leaves{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lf{aspect-ratio:1;border-radius:0 70% 0 70%;display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:700;font-size:16px;padding:14px}
+.lf:nth-child(1){background:var(--green);color:var(--cream)}
+.lf:nth-child(2){background:var(--pink);color:var(--green);border-radius:70% 0 70% 0}
+.lf:nth-child(3){background:#cfe0d6}
+.lf:nth-child(4){background:#cfe0d6;border-radius:70% 0 70% 0}
+.lf:nth-child(5){background:var(--green-2);color:var(--cream)}
+.lf:nth-child(6){background:var(--pink-l);border-radius:70% 0 70% 0}
+.contact{background:var(--white);border-top:1px solid var(--line)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+dt{font-family:var(--disp);font-weight:700;color:var(--pink-d);font-size:14px;margin-top:18px}
+dd{font-size:18px}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:400;color:var(--mute)}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:14px 16px;border-radius:16px;border:1.5px solid var(--line);background:var(--cream);font:inherit;font-weight:400;color:var(--green)}
+input:focus,select:focus,textarea:focus{border-color:var(--green)}
+textarea{min-height:110px}
+.consent{font-size:13px;color:var(--mute)}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--green);text-decoration:underline;cursor:pointer}
+.send{justify-self:start;padding:15px 30px;border-radius:999px;background:var(--pink);color:var(--green);border:0;font:inherit;font-weight:600;cursor:pointer}
+.send:hover{background:var(--pink-d)}
+footer{background:var(--green);color:#a8bcb5;font-size:14px;padding:40px 0}
+footer .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px;color:var(--cream)}
+footer .top .linkbtn{color:var(--pink)}
+footer ul{list-style:none;columns:3;column-gap:28px}
+footer li{break-inside:avoid;margin-bottom:4px}
+/* privacy dialog */
+dialog{border:0;padding:0;border-radius:28px;width:min(880px,94vw);max-height:90vh;background:var(--cream);color:var(--green);box-shadow:0 40px 80px -30px rgba(22,48,43,.6)}
+dialog::backdrop{background:rgba(22,48,43,.55);backdrop-filter:blur(3px)}
+.dh{position:sticky;top:0;background:var(--green);color:var(--cream);padding:24px 30px;display:flex;justify-content:space-between;align-items:center;gap:16px;z-index:1}
+.dh h2{font-size:clamp(24px,3vw,34px);margin:0;color:var(--cream)}
+.dh small{display:block;font-family:var(--body);font-weight:300;font-size:13px;color:#b9cbc5;letter-spacing:0;margin-top:4px}
+.x{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--pink);background:transparent;color:var(--pink);font-size:22px;cursor:pointer;flex:none}
+.pol{padding:28px 30px 36px;overflow:auto;max-height:calc(90vh - 96px)}
+.pol .toc{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.pol .toc a{font-size:13px;text-decoration:none;background:var(--pink-l);padding:6px 12px;border-radius:999px}
+.pol h3{font-family:var(--disp);font-size:20px;margin:30px 0 10px;scroll-margin-top:20px}
+.pol h3 span{color:var(--pink-d);margin-right:6px}
+.pol p,.pol li{font-size:15.5px;color:#2d4540}
+.pol p+p{margin-top:10px}
+.pol ul{margin:8px 0 0 20px}
+.pol li{margin-bottom:6px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px 22px;display:grid;grid-template-columns:140px 1fr;gap:6px 16px;font-size:15px}
+.card dt{margin:0;font-size:13px}
+.card dd{font-size:15px}
+.tbl{overflow-x:auto;margin-top:8px}
+.tbl table{border-collapse:collapse;min-width:640px;width:100%;font-size:14px}
+.tbl th{text-align:left;font-family:var(--disp);font-weight:700;font-size:13px;background:var(--green);color:var(--cream);padding:10px 12px}
+.tbl th:first-child{border-radius:10px 0 0 0}.tbl th:last-child{border-radius:0 10px 0 0}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;background:var(--white)}
+@media (max-width:960px){
+  nav{display:none}
+  .hero .wrap,.green .wrap,.contact .wrap{grid-template-columns:1fr}
+  .div{grid-template-columns:1fr 1fr}
+  .ring{grid-template-columns:1fr 1fr;row-gap:32px}.ring::before{display:none}
+  footer ul{columns:2}
+}
+@media (max-width:560px){.div{grid-template-columns:1fr}footer ul{columns:1}.card{grid-template-columns:1fr}.pol,.dh{padding-left:20px;padding-right:20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#"><svg viewBox="0 0 30 30" aria-hidden="true"><g fill="#F28FB0"><ellipse cx="15" cy="6" rx="4" ry="6"/><ellipse cx="15" cy="24" rx="4" ry="6"/><ellipse cx="6" cy="15" rx="6" ry="4"/><ellipse cx="24" cy="15" rx="6" ry="4"/></g><polygon points="15,10 19.3,12.5 19.3,17.5 15,20 10.7,17.5 10.7,12.5" fill="#16302B"/><circle cx="15" cy="15" r="2" fill="#FBF8F3"/></svg>LEX FLOWER <small>LLC</small></a>
+  <nav><a href="#cycle">How it connects</a><a href="#divisions">Divisions</a><a href="#green">Green services</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Metal, logistics <em>and things that grow</em></h1>
+      <p>LEX FLOWER LLC in Lviv trades metals and chemicals, makes wire products and fasteners, collects waste and scrap, moves and stores cargo — and designs and maintains green spaces.</p>
+      <div class="btns"><a class="btn" href="#contact">Get in touch</a><a class="btn o" href="#divisions">Our divisions</a></div>
+    </div>
+    <div class="bloom" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <path d="M200 240 Q200 270 190 290 T210 330 T190 370" fill="none" stroke="#7A8A8F" stroke-width="5" stroke-linecap="round"/>
+        <path d="M200 250 C230 250 260 270 268 300 C238 302 212 284 200 250Z" fill="#16302B"/>
+        <path d="M196 300 C166 296 142 312 134 338 C162 342 188 328 196 300Z" fill="#1f3f38"/>
+        <g>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#F28FB0"/>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#F28FB0" transform="rotate(60 200 170)"/>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#fbb8cd" transform="rotate(120 200 170)"/>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#F28FB0" transform="rotate(180 200 170)"/>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#fbb8cd" transform="rotate(240 200 170)"/>
+          <ellipse class="pt" cx="200" cy="90" rx="34" ry="62" fill="#F28FB0" transform="rotate(300 200 170)"/>
+        </g>
+        <g class="nut"><polygon points="200,128 236,149 236,191 200,212 164,191 164,149" fill="#16302B"/><circle cx="200" cy="170" r="17" fill="#FBF8F3"/><circle cx="200" cy="170" r="17" fill="none" stroke="#7A8A8F" stroke-width="3" stroke-dasharray="4 4"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="cycle" id="cycle">
+  <div class="wrap">
+    <h2>One connected cycle</h2>
+    <p class="sub">Our divisions feed each other: what we collect becomes raw material, what we make is stored and delivered by our own logistics.</p>
+    <div class="ring">
+      <div class="stage"><div class="dot">01</div><h3>Collect</h3><p>Non-hazardous waste and scrap metal from businesses and sites.</p></div>
+      <div class="stage"><div class="dot">02</div><h3>Trade</h3><p>Metals, ores, chemicals and recyclables supplied wholesale.</p></div>
+      <div class="stage"><div class="dot">03</div><h3>Make</h3><p>Wire products, chains, springs and fasteners.</p></div>
+      <div class="stage"><div class="dot">04</div><h3>Deliver</h3><p>Storage, cargo handling and road freight to your door.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="divisions">
+  <div class="wrap">
+    <h2>Divisions</h2>
+    <p class="sub">Six areas of work under one company and one contract.</p>
+    <div class="div">
+      <div class="dv feat"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><rect x="3" y="9" width="20" height="8" rx="1"/><path d="M7 9V6h12v3M7 17v3h12v-3"/></svg></div><h3>Metals and scrap</h3><p>Wholesale of metals and metal ores; purchase and sale of scrap and recyclable waste.</p><ul><li><span>Metals and ores</span><span>46.72</span></li><li><span>Waste and scrap</span><span>46.77</span></li></ul></div>
+      <div class="dv"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><polygon points="13,3 21,8 21,18 13,23 5,18 5,8"/><circle cx="13" cy="13" r="3.5"/></svg></div><h3>Manufacturing</h3><p>Production of wire goods, chains, springs, bolts, screws and nuts, plus vegetable oils and fats.</p><ul><li><span>Wire, chains, springs</span><span>25.93</span></li><li><span>Fasteners</span><span>25.94</span></li><li><span>Oils and fats</span><span>10.41</span></li></ul></div>
+      <div class="dv"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><path d="M10 3h6v5l5 12H5l5-12z"/><path d="M8 15h10"/></svg></div><h3>Chemicals and wholesale</h3><p>Industrial chemical products and a wide range of other goods for business customers.</p><ul><li><span>Chemical products</span><span>46.75</span></li><li><span>General wholesale</span><span>46.90</span></li></ul></div>
+      <div class="dv"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><rect x="2" y="7" width="14" height="11" rx="1"/><path d="M16 11h5l3 4v3h-8"/><circle cx="7" cy="20" r="2"/><circle cx="19" cy="20" r="2"/></svg></div><h3>Logistics</h3><p>Road freight, warehousing, loading and unloading, and transport support services.</p><ul><li><span>Road freight</span><span>49.41</span></li><li><span>Warehousing</span><span>52.10</span></li><li><span>Cargo handling</span><span>52.24</span></li><li><span>Transport support</span><span>52.29</span></li></ul></div>
+      <div class="dv feat"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><path d="M13 23V11"/><path d="M13 13C13 7 17 4 22 4c0 5-3 9-9 9z"/><path d="M13 16c0-4-3-7-8-7 0 4 3 7 8 7z"/></svg></div><h3>Environment</h3><p>Collection of non-hazardous waste and landscaping services for businesses and residential areas.</p><ul><li><span>Waste collection</span><span>38.11</span></li><li><span>Landscaping</span><span>81.30</span></li></ul></div>
+      <div class="dv"><div class="ic"><svg viewBox="0 0 26 26" fill="none" stroke="#16302B" stroke-width="2"><path d="M14 2 6 14h6l-1 10 8-12h-6z"/></svg></div><h3>Engineering and IT</h3><p>Repair of electrical equipment and in-house software for tracking, logistics and clients.</p><ul><li><span>Electrical repair</span><span>33.14</span></li><li><span>Programming</span><span>62.01</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="green" id="green">
+  <div class="wrap">
+    <div class="leaves" aria-hidden="true">
+      <div class="lf">Lawns</div><div class="lf">Planting</div><div class="lf">Trees</div>
+      <div class="lf">Cleanup</div><div class="lf">Care</div><div class="lf">Design</div>
+    </div>
+    <div>
+      <h2>The "flower" in our name</h2>
+      <p>Our landscaping team plans, plants and maintains green areas around offices, warehouses, production sites and residential complexes.</p>
+      <p>Because we also collect waste and run our own trucks, garden cleanup and removal of green waste are handled by the same team — no extra contractors.</p>
+      <a class="btn" style="margin-top:26px" href="#contact">Order landscaping</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Get in touch</h2>
+      <p class="sub">Tell us what you need to buy, sell, move or grow.</p>
+      <dl>
+        <dt>Address</dt><dd>10 of. 411, vul. Plastova<br>Lviv, 79024, Ukraine</dd>
+        <dt>Email</dt><dd><a href="mailto:support@lexflowerllc.shop">support@lexflowerllc.shop</a></dd>
+        <dt>Director</dt><dd>Anhelina Burch</dd>
+      </dl>
+    </div>
+    <form id="f">
+      <label>Name or company<input name="name" required></label>
+      <label>Email<input name="email" type="email" required></label>
+      <label>Division<select name="type"><option>Metals and scrap</option><option>Wire products and fasteners</option><option>Chemicals / wholesale</option><option>Freight and warehousing</option><option>Waste collection</option><option>Landscaping</option><option>Electrical repair</option><option>Software</option></select></label>
+      <label>Details<textarea name="msg" required></textarea></label>
+      <p class="consent">By sending a message you agree that LEX FLOWER LLC will process your data as described in the <button type="button" class="linkbtn" data-policy>Privacy Policy</button>.</p>
+      <button type="submit" class="send">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="top"><span>LEX FLOWER LLC © 2026 · Lviv, Ukraine</span><button type="button" class="linkbtn" data-policy>Privacy Policy</button></div>
+  <ul>
+    <li>10.41 Manufacture of oils and fats</li><li>46.72 Wholesale of metals and metal ores</li>
+    <li>81.30 Landscape service activities</li><li>46.75 Wholesale of chemical products</li>
+    <li>46.77 Wholesale of waste and scrap</li><li>46.90 Non-specialised wholesale trade</li>
+    <li>49.41 Freight transport by road</li><li>52.10 Warehousing and storage</li>
+    <li>52.24 Cargo handling</li><li>52.29 Other transportation support activities</li>
+    <li>62.01 Computer programming</li><li>25.93 Manufacture of wire products, chains and springs</li>
+    <li>25.94 Manufacture of fasteners and screw machine products</li><li>33.14 Repair of electrical equipment</li>
+    <li>38.11 Collection of non-hazardous waste</li>
+  </ul>
+</div></footer>
+
+<dialog id="policy" aria-labelledby="pol-title">
+  <div class="dh">
+    <div><h2 id="pol-title">Privacy Policy</h2><small>LEX FLOWER LLC · version 1.0 · effective 29 September 2026</small></div>
+    <button class="x" type="button" aria-label="Close" data-close>×</button>
+  </div>
+  <div class="pol">
+    <nav class="toc" aria-label="Policy sections">
+      <a href="#p1">Who we are</a><a href="#p2">Who this covers</a><a href="#p3">Processing activities</a><a href="#p4">Website</a><a href="#p5">Sharing</a><a href="#p6">Retention</a><a href="#p7">Your rights</a><a href="#p8">Contact</a>
+    </nav>
+
+    <p>LEX FLOWER LLC works in several fields — metals and scrap trading, manufacturing, logistics, waste collection, landscaping, electrical repair and software. Each of them involves different people and different data. This policy explains, in plain language, what personal data we handle in each case and why.</p>
+
+    <h3 id="p1"><span>1.</span>Who we are</h3>
+    <dl class="card">
+      <dt>Controller</dt><dd>LEX FLOWER LLC</dd>
+      <dt>Registered office</dt><dd>10 of. 411, vul. Plastova, Lviv, 79024, Ukraine</dd>
+      <dt>Director</dt><dd>Anhelina Burch</dd>
+      <dt>Privacy contact</dt><dd><a href="mailto:support@lexflowerllc.shop">support@lexflowerllc.shop</a> (subject: "Personal data")</dd>
+    </dl>
+    <p>We act as the controller of personal data under the Law of Ukraine "On Personal Data Protection" No. 2297-VI. For clients and partners located in the European Union, we also follow the principles of the General Data Protection Regulation (GDPR).</p>
+
+    <h3 id="p2"><span>2.</span>Whose data this policy covers</h3>
+    <ul>
+      <li><b>Business customers and their contact persons</b> — buyers of metals, chemicals, fasteners and other goods.</li>
+      <li><b>Suppliers and sellers of scrap</b> — companies and individuals who sell us scrap metal or recyclable materials.</li>
+      <li><b>Freight and warehouse clients</b> — senders, recipients and their representatives.</li>
+      <li><b>Drivers and visitors</b> at our warehouses and loading sites.</li>
+      <li><b>Landscaping and waste collection clients</b> — owners and managers of the sites we service.</li>
+      <li><b>Website visitors</b> and anyone who writes to us.</li>
+    </ul>
+
+    <h3 id="p3"><span>3.</span>What we process and why</h3>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Activity</th><th>Data</th><th>Purpose</th><th>Legal basis</th></tr></thead>
+        <tbody>
+          <tr><td>Enquiries</td><td>Name, email, company, message</td><td>Answering questions, preparing offers</td><td>Consent; steps before a contract</td></tr>
+          <tr><td>Sales and purchasing</td><td>Contact person's name, position, phone, email; company details</td><td>Concluding and performing supply contracts, invoicing</td><td>Contract; legal obligation</td></tr>
+          <tr><td>Scrap and recyclables purchase</td><td>For individuals: full name, ID document details, tax number where required, payment details</td><td>Documenting purchases as required by Ukrainian law on scrap metal</td><td>Legal obligation</td></tr>
+          <tr><td>Freight and warehousing</td><td>Names of senders and recipients, delivery addresses, drivers' names, vehicle registration numbers</td><td>Organising transport, issuing waybills, controlling access to warehouses</td><td>Contract; legitimate interest in site safety</td></tr>
+          <tr><td>Waste collection</td><td>Site address, contact person, collection schedule</td><td>Planning and confirming collections, waste records</td><td>Contract; legal obligation</td></tr>
+          <tr><td>Landscaping</td><td>Site address, contact person, photos of the site before and after work</td><td>Designing, carrying out and documenting landscaping work</td><td>Contract</td></tr>
+          <tr><td>Electrical repair</td><td>Contact details of the equipment owner, equipment data</td><td>Diagnosing, repairing and warranty service</td><td>Contract</td></tr>
+          <tr><td>Accounting</td><td>Data on invoices, acts and payment documents</td><td>Bookkeeping and tax reporting</td><td>Legal obligation</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Photos taken during landscaping work are of the site, not of people. If a person appears in a photo by chance, we blur or remove it before using the photo anywhere outside the project.</p>
+
+    <h3 id="p4"><span>4.</span>This website</h3>
+    <ul>
+      <li>The contact form does not save anything on the website. When you press "Send message", your own email program opens with a draft addressed to us; we receive your data only if you send that email.</li>
+      <li>We do not use analytics, advertising cookies or tracking pixels.</li>
+      <li>Fonts are loaded from Google Fonts, so your browser sends your IP address to Google when the page opens. The hosting provider also records standard server logs (IP address, time, requested page) for security.</li>
+    </ul>
+
+    <h3 id="p5"><span>5.</span>Who we share data with</h3>
+    <p>We never sell personal data. We share it only when necessary, and only with:</p>
+    <ul>
+      <li>carriers, warehouse operators and subcontractors involved in delivering your order or service;</li>
+      <li>licensed waste processing facilities that receive the waste we collect;</li>
+      <li>our accountant, bank, IT and email providers;</li>
+      <li>state authorities (tax, environmental, law enforcement) when the law requires it.</li>
+    </ul>
+    <p>Our in-house software team may access data only to maintain the systems where it is stored. If data has to be transferred to another country, we do so only with appropriate safeguards.</p>
+
+    <h3 id="p6"><span>6.</span>How long we keep data</h3>
+    <ul>
+      <li><b>Enquiries without a contract</b> — up to 6 months after our last reply.</li>
+      <li><b>Contracts, waybills, purchase and accounting documents</b> — for the periods set by Ukrainian accounting, tax and archival law.</li>
+      <li><b>Warehouse access records</b> (drivers, vehicles) — up to 12 months.</li>
+      <li><b>Landscaping project photos</b> — for the duration of the contract and the warranty period.</li>
+    </ul>
+    <p>After these periods, data is deleted or anonymised.</p>
+
+    <h3 id="p7"><span>7.</span>Your rights</h3>
+    <p>You can ask us at any time to:</p>
+    <ul>
+      <li>tell you whether we process your data, and give you a copy;</li>
+      <li>correct inaccurate or incomplete data;</li>
+      <li>delete data we no longer need or process unlawfully;</li>
+      <li>restrict or stop processing, or withdraw your consent;</li>
+      <li>explain who we have shared your data with.</li>
+    </ul>
+    <p>Some data (for example, documents on scrap purchases or accounting records) cannot be deleted before the legal retention period ends; in that case we will explain why. You may also complain to the Ukrainian Parliament Commissioner for Human Rights, or to your national data protection authority if you are in the EU.</p>
+
+    <h3 id="p8"><span>8.</span>Contact and changes</h3>
+    <p>Send privacy requests to <a href="mailto:support@lexflowerllc.shop">support@lexflowerllc.shop</a> or by post to LEX FLOWER LLC, 10 of. 411, vul. Plastova, Lviv, 79024, Ukraine. We reply within 30 calendar days.</p>
+    <p>We keep our data secure with access controls, password-protected systems and regular backups. When we change this policy, we update the version number and effective date at the top.</p>
+  </div>
+</dialog>
+
+<script>
+const dlg=document.getElementById('policy');
+const openP=()=>{if(dlg.showModal){dlg.showModal()}else{dlg.setAttribute('open','')}};
+document.querySelectorAll('[data-policy]').forEach(b=>b.addEventListener('click',openP));
+dlg.querySelector('[data-close]').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+dlg.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();dlg.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'})}));
+if(location.hash==='#privacy')openP();
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  location.href='mailto:support@lexflowerllc.shop?subject='+encodeURIComponent(d.get('type')+' — '+d.get('name'))+'&body='+encodeURIComponent(d.get('msg')+'\n\n'+d.get('email'));
+});
+</script>
+</body>
+</html>
